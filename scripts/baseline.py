@@ -7,6 +7,7 @@
 
 
 import sys
+import torch
 sys.path.append('.')
 from config import STUDENT_MODEL, MAX_NEW_TOKENS, TEST_SAMPLES
 from utils import load_model, measure_latency, measure_memory, compute_perplexity, get_wikitext_samples, save_result
