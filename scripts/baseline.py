@@ -1,10 +1,15 @@
 # scripts/baseline.py
 """Run FP16 baseline evaluation"""
 
+!git clone https://github.com/Zain-Haider-ML/resources-aware-llm.git
+%cd resources-aware-llm
+%cd scripts
+
+
 import sys
 sys.path.append('.')
-from scripts.config import STUDENT_MODEL, MAX_NEW_TOKENS, TEST_SAMPLES
-from scripts.utils import load_model, measure_latency, measure_memory, compute_perplexity, get_wikitext_samples, save_result
+from config import STUDENT_MODEL, MAX_NEW_TOKENS, TEST_SAMPLES
+from utils import load_model, measure_latency, measure_memory, compute_perplexity, get_wikitext_samples, save_result
 
 def run_baseline():
     print("\n" + "="*60)
